@@ -12,7 +12,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
         try {
-            //new HerokuHttpServer(8080).run();
+            new HerokuHttpServer(Integer.parseInt(args[0])).run();
             
             TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
             CalculatorBot bot = new CalculatorBot();
